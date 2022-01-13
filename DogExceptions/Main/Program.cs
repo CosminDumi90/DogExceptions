@@ -7,29 +7,9 @@ namespace Main
     {
         static void Main(string[] args)
         {
-            try
-            {
-                Dog Dog = new Dog("a",30);
-            }
-            catch (InvalidNameException ex)
-            {
-
-                Console.WriteLine(ex.Message);
-            }
-            
-
-            try
-            {
-                Dog Dog = new Dog("azorel", 101);
-            }
-            catch (InvalidLifeExpetancy ex)
-            {
-
-                Console.WriteLine(ex.Message);
-            }
-
-
-
+            Dog doggt = new Dog("a", 101);
         }
+           
     }
 }
+

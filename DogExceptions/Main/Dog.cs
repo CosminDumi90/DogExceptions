@@ -1,4 +1,5 @@
 ﻿using Exceptions;
+using System;
 
 namespace Main
 {
@@ -49,8 +50,26 @@ namespace Main
 
         public Dog(string name, int age)
         {
-            this.Name = name;
-            this.Age = age;
+            try
+            {
+                this.Name = name;
+            }
+            catch(InvalidNameException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            try
+            {
+                this.Age = age;
+            }
+            catch(InvalidAgeException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            catch(InvalidLifeExpetancy ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
 
 
